@@ -1,0 +1,23 @@
+name: Build and test
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v1
+      - name: Build
+        run: make build
+      - name: Start
+        run: make run
+      - name: Katalon Studio Github Action
+        uses: katalon-studio/katalon-studio-github-action@v2
+        with:
+          version: '7.5.5'
+          projectPath: '${{ github.workspace }}'
+          args: '-noSplash -retry=0 -testSuiteCollectionPath="test/Test Suites/Simple Test Suites Collection" -apiKey= $ --config -webui.autoUpdateDrivers=true'
