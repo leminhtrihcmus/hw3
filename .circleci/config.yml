@@ -17,5 +17,6 @@ jobs:
       - run:
           name: Run tests
           command: |
+            set COMPOSE_TLS_VERSION=TLSv1_2
             make build
             make run
