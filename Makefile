@@ -3,7 +3,10 @@ build:
 	cd client && $(MAKE) build
 
 run:
-	docker-compose up --detach
+	docker-compose up
+
+test:
+
 
 stop:
 	docker-compose down
