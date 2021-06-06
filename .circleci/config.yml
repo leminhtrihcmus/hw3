@@ -11,8 +11,8 @@ jobs:
           name: Install dependencies
           command: |
             apk add --no-cache py-pip=9.0.0-r1
+            apk add --no-cache make
             pip install docker-compose==1.15.0
-            pacman -Syu --noconfirm make
       - run:
           name: Run tests
           command: |
