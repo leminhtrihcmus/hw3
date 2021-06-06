@@ -1,11 +1,6 @@
 version: 2.1
-
-orbs:
-  node: circleci/node@4.1
-
-
 jobs:
-  build-and-test:  
+  build-and-test:
     steps:
       - checkout
       - setup_remote_docker
@@ -14,7 +9,7 @@ jobs:
           command: |
             apk add --no-cache py-pip=9.0.0-r1
             pip install docker-compose==1.15.0
-      -run: 
+      -run:
           name: Build
           command: |
             make build
