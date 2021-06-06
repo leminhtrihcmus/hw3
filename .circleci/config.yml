@@ -2,11 +2,10 @@ version: 2.1
 jobs:
   build:
     working_directory: /dockerapp1
-    docker:
-      - image: docker:17.05.0-ce-git
     steps:
       - checkout
       - setup_remote_docker
+          version: 19.03.13
       - run:
           name: Install dependencies
           command: |
