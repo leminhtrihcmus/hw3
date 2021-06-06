@@ -1,7 +1,9 @@
 version: 2.1
 jobs:
   build:
-    docker: true
+    working_directory: /dockerapp1
+    docker:
+      - image: docker:17.05.0-ce-git
     steps:
       - checkout
       - setup_remote_docker:
