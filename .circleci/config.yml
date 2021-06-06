@@ -1,6 +1,9 @@
 version: 2.1
 jobs:
-  build-and-test:
+  build:
+    working_directory: /dockerapp1
+    docker:
+      - image: docker:17.05.0-ce-git
     steps:
       - checkout
       - setup_remote_docker
@@ -10,10 +13,7 @@ jobs:
             apk add --no-cache py-pip=9.0.0-r1
             pip install docker-compose==1.15.0
       - run:
-          name: Build
+          name: Run tests
           command: |
             make build
             make run
-workflows:
-    jobs:
-      - build-and-test
