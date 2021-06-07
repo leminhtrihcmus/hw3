@@ -15,8 +15,10 @@ jobs:
       with:
         node-version: 10.x
     - name: Build client
-      run: yarn build
       working-directory: client
+      run: |
+        yarn install
+        yarn build
     - name: Build Server
       working-directory: server
       run: |
