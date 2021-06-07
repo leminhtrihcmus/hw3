@@ -14,7 +14,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 10.x
-    - name: Build server
+    - name: Install server
       run: npm install
+      working-directory: server 
+    - name: Start server
       run: npm start
       working-directory: server 
