@@ -6,6 +6,7 @@ const router = require('./routes');
 const http = require('http');
 const socketIO = require('socket.io');
 const cors = require('cors');
+const path = require('path');
 
 require('dotenv').config();
 
@@ -13,7 +14,7 @@ app.use(express.json());
 app.use(cors());
 
 mongoose
-	.connect('mongodb://mongo:27017/blockchain', {
+	.connect(process.env.DB_PASS, {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 		useFindAndModify: true,
@@ -32,11 +33,15 @@ app.use((err, req, res, next) => {
 const server = http.createServer(app);
 const io = socketIO(server, {
 	cors: {
-		origin: '*'
-	}
+		origin: '*',
+	},
 });
 
 io.on('connection', (socket) => require('./socket')(io, socket));
 
+app.use(express.static(path.resolve(__dirname, "./client/build")));
+app.get('*', function (request, response) {
+	response.sendFile(path.resolve(__dirname, './client/build', 'index.html'));
+});
 
 server.listen(port, () => console.log(`Server is listening on port ${port}`));
