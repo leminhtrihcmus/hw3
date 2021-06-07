@@ -1,4 +1,4 @@
-FROM node:14-slim
+FROM stefanscherer/node-windows:pure
 
 WORKDIR /usr/src/app
 
