@@ -18,7 +18,7 @@ jobs:
       working-directory: client
       run: |
         yarn install --network-timeout 100000
-        yarn build
+        CI=false yarn build
     - name: Build Server
       working-directory: server
       run: |
