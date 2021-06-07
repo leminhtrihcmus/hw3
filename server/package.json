@@ -6,7 +6,8 @@
   "author": "khanh",
   "scripts": {
     "dev": "nodemon src/index,js",
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "prod": "pm2 start src/index.js"
   },
   "license": "MIT",
   "dependencies": {

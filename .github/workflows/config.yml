@@ -14,22 +14,19 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: 10.x
+    - name: Install pm2
+      run:  npm install pm2 -g    
     - name: Build Server
       working-directory: server
       run: |
         yarn install
-        yarn start
-  test:
-    runs-on: windows-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+        yarn prod
     - name: Katalon Studio Github Action
       uses: katalon-studio/katalon-studio-github-action@v2.1
       with:
           version: '7.5.5'
-          projectPath: '${{ github.workspace }}'
-          args: '-noSplash -retry=0 -browserType=Chrome -statusDelay=15 -testSuitePath="test/Test Suites/Simple Test Suites Collection.ts" -apiKey= ${{ secrets.KATALON_API_KEY }} --config -webui.autoUpdateDrivers=true'
+          projectPath: '${{ github.workspace }}\test'
+          args: '-noSplash -retry=0 -browserType=Chrome -statusDelay=15 -testSuitePath="test/Test Suites/Simple Test Suites Collection.ts" -apiKey= ${{ secrets.KATALON_API_KEY }} --config -webui.autoUpdateDrivers=true'    
 
 
       
