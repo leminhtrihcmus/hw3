@@ -19,7 +19,7 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://localhost:3000/')
+WebUI.navigateToUrl('http://localhost:5000/')
 
 WebUI.click(findTestObject('Object Repository/Page_Funretro/a_eCoinWallet'))
 

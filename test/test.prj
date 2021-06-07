@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
    <description></description>
-   <name>test</name>
+   <name>Test</name>
    <tag></tag>
-   <UUID>fff2428a-713d-468e-b3f2-2cc0ae198ea2</UUID>
+   <UUID>7bcdc10a-4fcd-4a3b-8ca0-18d2446e97ca</UUID>
    <migratedVersion>5.9.0</migratedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
    <sourceContent>

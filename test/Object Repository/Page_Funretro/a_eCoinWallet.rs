@@ -3,7 +3,7 @@
    <description></description>
    <name>a_eCoinWallet</name>
    <tag></tag>
-   <elementGuidId>bd77157e-27d1-42f6-936e-35dff5e524c9</elementGuidId>
+   <elementGuidId>aa39a253-dd49-4155-a8b6-a3653ed1ea9a</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>CSS</key>
-         <value>a.Navbarstyle__Logo-itcgbi-1.ggjPoR</value>
+         <value>a.Navbarstyle__Logo-itcgbi-1.ixBZmf</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -28,7 +28,7 @@
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>Navbarstyle__Logo-itcgbi-1 ggjPoR</value>
+      <value>Navbarstyle__Logo-itcgbi-1 ixBZmf</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -49,7 +49,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;root&quot;)/div[@class=&quot;sc-fKgIGh dWJnyB&quot;]/div[@class=&quot;Navbarstyle__Container-itcgbi-0 cRUQuc&quot;]/a[@class=&quot;Navbarstyle__Logo-itcgbi-1 ggjPoR&quot;]</value>
+      <value>id(&quot;root&quot;)/div[@class=&quot;sc-fKgIGh efpGaJ&quot;]/div[@class=&quot;Navbarstyle__Container-itcgbi-0 emvWWi&quot;]/a[@class=&quot;Navbarstyle__Logo-itcgbi-1 ixBZmf&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
