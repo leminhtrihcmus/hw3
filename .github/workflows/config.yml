@@ -10,7 +10,11 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-    - name: Build
-      run: make build
-    - name: Start
-      run: make run
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.x
+    - name: Build server
+      run: npm install
+      run: npm start
+      working-directory: server 
