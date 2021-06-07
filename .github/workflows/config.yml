@@ -14,11 +14,6 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: 10.x
-    - name: Build client
-      working-directory: client
-      run: |
-        yarn install --network-timeout 100000
-        CI=false yarn build
     - name: Build Server
       working-directory: server
       run: |
