@@ -17,7 +17,7 @@ jobs:
     - name: Build client
       working-directory: server/src/client   
       run: |
-        yarn install
+        yarn install --network-timeout 1000000
         yarn build
     - name: Install pm2
       run:  npm install pm2 -g    
