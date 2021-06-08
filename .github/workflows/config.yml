@@ -14,6 +14,11 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: 10.x
+    - name: Build client
+      working-directory: server/src/client   
+      run: |
+        yarn install
+        yarn build
     - name: Install pm2
       run:  npm install pm2 -g    
     - name: Build Server
