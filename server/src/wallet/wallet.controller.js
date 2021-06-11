@@ -4,9 +4,12 @@ const Wallet = require('./wallet.model');
 
 exports.createWallet = catchAsync(async (req, res, next) => {
     const { password } = req.body;
-
-    const wallet = new Wallet({ password });
-    await wallet.save();
+    try {
+        const wallet = new Wallet({ password });
+        await wallet.save();
+    } catch (error) {
+        throw(new Error(error))
+    }
 
     res.json({ msg: 'Create wallet succesfully', privateKey: wallet.privateKey });
 });
