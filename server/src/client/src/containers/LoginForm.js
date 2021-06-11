@@ -17,7 +17,7 @@ const LoginForm = () => {
 	return (
 		<Form onSubmit={handleSubmit(onSubmit)}>
 			<Form.Title>Login</Form.Title>
-			{/* {wallet.errorMsg && <Form.Error>{wallet.errorMsg}</Form.Error>} */}
+			{wallet.errorMsg && <Form.Error>{wallet.errorMsg}</Form.Error>}
 			<Form.Input
 				id="privatekey"
 				type="text"
