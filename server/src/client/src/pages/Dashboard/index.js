@@ -88,11 +88,13 @@ const Dashboard = () => {
 		dispatch(setSelectedMenu('dashboard'));
 		return () => {
 			dispatch(removeSelectedMenu());
+
 		};
 	}, []);
 
 	useEffect(() => {
 		socket.emit('get-balance', wallet.publicKey);
+
 	}, []);
 
 	useEffect(() => {
