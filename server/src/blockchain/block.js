@@ -28,8 +28,10 @@ class Block {
 			this.nonce++;
 			this.hash = this.calculateHash();
 		}
+
 	}
 
+	// has validate trasaction
 	hasValidTransactions() {
 		for (const tx of this.transactions) {
 			if (!tx.isValid()) {

@@ -78,6 +78,7 @@ class Blockchain {
 					if (tx.fromAddress === address || tx.toAddress === address) txs.push(tx);
 				})
 			);
+			
 		return txs;
 	}
 }
